@@ -1,10 +1,10 @@
 import '../scss/index.scss';
-import Timer from './timer.js';
-import deleteLives from './lives.js';
-import Game from './game';
-const game = new Game();
-game.start();
+import startGame from "./startGame";
+import finishGame from "./finishGame";
 
 const timer = new Timer();
 timer.start();
 
+
+startGame();
+finishGame();

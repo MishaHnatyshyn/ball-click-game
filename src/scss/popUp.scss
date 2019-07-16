@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#field {
+  width: 700px;
+  height: 700px;
+  border: 2px solid black;
+  position: relative;
+}
+
+.start {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    padding: 25px;
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+
+    &-title {
+      margin-bottom: 25px;
+      color: $main-color;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    &-button {
+      position: relative;
+      margin: auto;
+      padding: 10px;
+      width: 50%;
+      font-size: 18px;
+      border: 2px solid black;
+      color: #fff;
+      background: $main-color;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .7);
+
+      &:active {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.finish {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    padding: 25px;
+    width: 300px;
+    height: 130px;
+    background-color: #fff;
+    text-align: center;
+
+    &-title {
+      margin-bottom: 10px;
+      color: $main-color;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 25px;
+      color: $main-color;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    &-button {
+      position: relative;
+      margin: auto;
+      padding: 10px;
+      width: 50%;
+      font-size: 18px;
+      border: 2px solid black;
+      color: #fff;
+      background: $main-color;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .7);
+
+      &:active {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.left-top,
+.left-bottom,
+.right-top,
+.right-bottom {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.left-top {
+  left: -2px;
+  top: -2px;
+}
+.left-bottom {
+  left: -2px;
+  bottom: -2px;
+}
+.right-top {
+  right: -2px;
+  top: -2px;
+}
+.right-bottom {
+  right: -2px;
+  bottom: -2px;
+}
