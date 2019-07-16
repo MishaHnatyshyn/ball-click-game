@@ -5,3 +5,6 @@ import Game from './game';
 const game = new Game();
 game.start();
 
+const timer = new Timer();
+timer.start();
+
