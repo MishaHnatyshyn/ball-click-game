@@ -6,7 +6,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="game-scene__wrapper">
+        <header class="header">
+            <div class = "header__lives" id = "header__lives">
+                <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+            </div>
+            <div class = "header__time" id = "time"></div>
+            <div class="header__points">0</div>
+        </header>
+    </div>
+          <div class="game-scene__wrapper">
             <div class="game-scene block">
                 <div class="game-scene__header" id="js-game-scene-header"></div>
                 <div class="game-scene__field js-game-scene-field">

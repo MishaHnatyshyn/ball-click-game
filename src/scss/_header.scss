@@ -1,0 +1,28 @@
+.container{
+  background: #4FC3F7;
+  height: 100vh;
+
+}
+
+.header{
+  width: 100%;
+  background: rgba(255, 255, 255, .2);
+  display: flex;
+  justify-content: space-around;
+  color: whitesmoke;
+  font-size: 2rem;
+  &__lives{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__life{
+    width: 20px;
+    height: 22px;
+    padding-right: 10px;
+  }
+  &__time{
+
+  }
+}
+
