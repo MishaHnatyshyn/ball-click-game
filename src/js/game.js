@@ -1,4 +1,5 @@
 import Ball from './ball';
+import deleteLives from './lives';
 
 export default class Game {
   constructor() {
@@ -7,6 +8,7 @@ export default class Game {
       score: 0,
       balls: [],
     };
+    this.scoreContainer = document.getElementById('score');
   }
 
   start() {
@@ -21,7 +23,12 @@ export default class Game {
   addScore() {
     this.state.score += 1;
     if (this.state.score % 5 === 0) this.updateInterval();
+    this.renderScore();
     this.log();
+  }
+
+  renderScore() {
+    this.scoreContainer.innerText = this.state.score;
   }
 
   updateInterval() {
@@ -32,6 +39,7 @@ export default class Game {
 
   removeLife() {
     this.state.lives -= 1;
+    deleteLives();
     this.log();
     if (this.state.lives === 0) this.gameOver();
   }

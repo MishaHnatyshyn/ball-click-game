@@ -1,16 +1,16 @@
 .container{
   background: #4FC3F7;
   height: 100vh;
-
 }
 
 .header{
   width: 100%;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-around;
   color: whitesmoke;
   font-size: 2rem;
+  top: 0;
   &__lives{
     display: flex;
     align-items: center;
