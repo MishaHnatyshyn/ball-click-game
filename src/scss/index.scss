@@ -1,2 +1,20 @@
 @import "variables";
 @import "popUp";
+@import "header";
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import 'partials/variable';
+@import "partials/font";
+@import "partials/common";
+@import "partials/16bit";
+@import "components/game-scene";
+@import "components/balloon";
+
+.container{
+  flex-wrap: wrap;
+
+}

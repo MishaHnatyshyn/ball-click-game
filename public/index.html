@@ -5,7 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-    <div id="field">
         <div class="start">
             <div class="start__form">
                 <div class="start__form-title">Welcome to Ball-click game!</div>
@@ -32,6 +31,30 @@
                     <div class="right-top"></div>
                     <div class="right-bottom"></div>
                 </div>
+               </div>
+        </div>
+    <div class="container">
+        <div class="game-scene__wrapper">
+            <div class="game-scene block">
+                <div class="game-scene__header" id="js-game-scene-header">
+                    <header class="header">
+                        <div class = "header__lives" id = "header__lives">
+                            <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                            <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                            <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                            <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                            <img src="../src/img/heart-icon.png" alt="Heart Icon" class="header__life">
+                        </div>
+                        <div class = "header__time" id = "time"></div>
+                        <div class="header__points" id="score">0</div>
+                    </header>
+                </div>
+                <div class="game-scene__field" id="js-game-scene-field">
+                </div>
+                <div class="block__corner block__corner--top-left"></div>
+                <div class="block__corner block__corner--top-right"></div>
+                <div class="block__corner block__corner--bot-right"></div>
+                <div class="block__corner block__corner--bot-left"></div>
             </div>
         </div>
     </div>
