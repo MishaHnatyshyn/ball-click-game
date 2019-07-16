@@ -10,7 +10,7 @@ export default class Game {
   }
 
   start() {
-    this.startInterval();
+    this.startInterval(2000);
   }
 
   log() {
@@ -20,7 +20,14 @@ export default class Game {
 
   addScore() {
     this.state.score += 1;
+    if (this.state.score % 5 === 0) this.updateInterval();
     this.log();
+  }
+
+  updateInterval() {
+    const newInterval = 2000 - this.state.score * 4 * 10;
+    clearInterval(this.interval);
+    this.startInterval(newInterval);
   }
 
   removeLife() {
@@ -35,10 +42,10 @@ export default class Game {
     this.showResults();
   }
 
-  startInterval() {
+  startInterval(interval) {
     this.interval = setInterval(() => {
       this.renderNewBall();
-    }, 2000);
+    }, interval);
   }
 
   clearGameData() {
