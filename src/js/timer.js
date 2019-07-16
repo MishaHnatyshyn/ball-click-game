@@ -1,40 +1,31 @@
-const timePlace = document.getElementById('time')
 export default class Timer {
-    constructor (tick){
+    constructor (){
         this.seconds = 0;
         this.minutes = 0;
-        this.tick = tick;
+        this.timePlace = document.getElementById('time')
     }
-    start() {
+    start = () => {
         this.interval = setInterval(this.updateSeconds, 1000);
+        requestAnimationFrame(this.getTime);
     }
-    stop() {
+    stop = () => {
         clearInterval(this.interval);
     }
-    updateSeconds() {
+    updateSeconds = () => {
         this.seconds++;
-        if (this.seconds == 10) {
+        if (this.seconds == 60) {
             this.seconds = 0;
             this.updateMinutes();
         }
-        return this.getTime;
+        return this.getTime();
     }
-    updateMinutes() {
+    updateMinutes = () => {
         this.minutes++;
     }
-    getTime() {
-        return (this.seconds < 10)
+    getTime = () => {
+        this.timePlace.innerHTML = (this.seconds < 10)
             ? `${this.minutes}:0${this.seconds}`
             : `${this.minutes}:${this.seconds}`;
     }
 
-}
-
-const timer1 = new Timer(tick);
-
-timer1.start();
-requestAnimationFrame(tick);
-
-function tick(){
-    timePlace.innerHTML = timer1.getTime()
 }
