@@ -1,0 +1,18 @@
+html, body{
+  height: 100vh;
+}
+
+#field{
+  position: relative;
+  height: 100%;
+}
+
+.ball{
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
