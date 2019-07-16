@@ -12,7 +12,7 @@ export default class Ball {
   createBall() {
     const ball = document.createElement('div');
     ball.style.width = '70px';
-    ball.className = 'ball';
+    ball.className = 'balloon';
     ball.style.height = '70px';
     ball.style.top = `${this.getRandomPosition()}%`;
     ball.style.left = `${this.getRandomPosition()}%`;
@@ -51,6 +51,6 @@ export default class Ball {
   }
 
   render() {
-    document.getElementById('field').appendChild(this.ball);
+    document.getElementById('js-game-scene-field').appendChild(this.ball);
   }
 }
