@@ -1,0 +1,29 @@
+.block {
+  position: relative;
+  border: 5px solid $black;
+  &__corner {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: $white;
+    &--top-left {
+      top: -5px;
+      left: -5px;
+    }
+
+    &--top-right {
+      top: -5px;
+      right: -5px;
+    }
+
+    &--bot-left {
+      bottom: -5px;
+      left: -5px;
+    }
+
+    &--bot-right {
+      bottom: -5px;
+      right: -5px;
+    }
+  }
+}
