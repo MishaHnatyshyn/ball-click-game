@@ -1,5 +1,6 @@
 import Ball from './ball';
 import deleteLives from './lives';
+import finishGame from "./finishGame";
 
 export default class Game {
   constructor() {
@@ -47,7 +48,7 @@ export default class Game {
   gameOver() {
     clearInterval(this.interval);
     this.removeAllBalls();
-    this.showResults();
+    finishGame(this.state.score)
   }
 
   startInterval(interval) {
@@ -62,10 +63,6 @@ export default class Game {
       score: 0,
       balls: [],
     };
-  }
-
-  showResults() {
-    alert(`Lives: ${this.state.lives}\nScore: , ${this.state.score}`);
   }
 
   renderNewBall() {
