@@ -1,4 +1,7 @@
 import '../scss/index.scss';
-import showResult from "./result";
+import startGame from "./startGame";
+import finishGame from "./finishGame";
 
-showResult(15, 20);
+
+startGame();
+finishGame();
