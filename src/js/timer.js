@@ -1,34 +1,40 @@
-class Timer {
-    constructor (){
+const timePlace = document.getElementById('time')
+export default class Timer {
+    constructor (tick){
         this.seconds = 0;
         this.minutes = 0;
-        this.timePlace = document.getElementById('time')
+        this.tick = tick;
     }
-    start = () => {
+    start() {
         this.interval = setInterval(this.updateSeconds, 1000);
-        requestAnimationFrame(this.getTime);
     }
-    stop = () => {
+    stop() {
         clearInterval(this.interval);
     }
-    updateSeconds = () => {
+    updateSeconds() {
         this.seconds++;
         if (this.seconds == 10) {
             this.seconds = 0;
             this.updateMinutes();
         }
-        return this.getTime();
+        return this.getTime;
     }
-    updateMinutes = () => {
+    updateMinutes() {
         this.minutes++;
     }
-    getTime = () => {
-        this.timePlace.innerHTML = (this.seconds < 10)
+    getTime() {
+        return (this.seconds < 10)
             ? `${this.minutes}:0${this.seconds}`
             : `${this.minutes}:${this.seconds}`;
     }
 
 }
 
-const timer = new Timer();
-timer.start();
+const timer1 = new Timer(tick);
+
+timer1.start();
+requestAnimationFrame(tick);
+
+function tick(){
+    timePlace.innerHTML = timer1.getTime()
+}
